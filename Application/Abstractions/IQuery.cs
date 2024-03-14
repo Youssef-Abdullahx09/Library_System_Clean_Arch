@@ -4,8 +4,8 @@ using MediatR;
 namespace Application.Abstractions;
 
 
-internal interface IQuery : IRequest<Result>
+public interface IQuery : IRequest<Result>
 { }
-internal interface IQuery<TRequest> : IRequest<Result<TRequest>>
+public interface IQuery<TRequest> : IRequest<Result<TRequest>>
 { }
 

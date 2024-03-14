@@ -3,9 +3,9 @@ using MediatR;
 
 namespace Application.Abstractions;
 
-internal class ICommand : IRequest<Result>
+public class ICommand : IRequest<Result>
 {
 }
-internal class ICommand<TResponse> : IRequest<Result<TResponse>>
+public class ICommand<TResponse> : IRequest<Result<TResponse>>
 {
 }
