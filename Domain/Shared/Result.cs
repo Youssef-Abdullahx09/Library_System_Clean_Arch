@@ -19,4 +19,5 @@ public class Result
     public bool IsFailure => !IsSuccess;
     public static Result Success() => new Result(true, Error.None);
     public static Result Failure(Error error) => new Result(false, error);
+    public static implicit operator Result(Error error) => Failure(error);
 }

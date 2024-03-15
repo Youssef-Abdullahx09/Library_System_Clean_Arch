@@ -12,4 +12,5 @@ public class Result<TValue> : Result
     public static Result<TValue> Success(TValue value) => new Result<TValue>(value, true, Error.None);
 
     public static implicit operator Result<TValue>(TValue? value) => Success(value);
+    public static implicit operator Result<TValue>(Error error) => new Result<TValue>(default, false, error);
 }
